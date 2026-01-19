@@ -1,16 +1,20 @@
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import models.Node;
 import models.Person;
+import models.Maps;
 import models.Maquina;
+import structures.maps.EjerciciosMapas;
 import structures.sets.Sets;
 import controllers.MaquinasController;
 
 public class App {
     
     public static void main(String[] args) throws Exception {
-        Sets setsClase = new Sets();
+        /* Sets setsClase = new Sets();
         Set<String> hashSet = setsClase.construirHashSet();
         System.out.println(hashSet);
         System.out.println(hashSet.size());
@@ -45,11 +49,80 @@ public class App {
 
         System.out.println("Carlos".compareTo("Ana"));
 
+        System.out.println("\n");
+        */
+
         
 
 
-        runMaquina();
+        //runMaquina();
+        //runMaps();
+        runEjercicios();
+
     }
+
+
+    private static void runEjercicios(){
+        EjerciciosMapas ejercicios = new EjerciciosMapas();
+        
+        System.out.println("--- Ejercicio 1 ---");
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+            21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17,
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            18, 19, 20,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+        );
+        Map<Integer, Integer> resultado = ejercicios.contarDuplicados(list);
+        System.out.println(resultado);
+
+        System.out.println("\n--- Ejercicio 2 ---");
+        List<Integer> list1 = Arrays.asList(
+            4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
+            7, 3, 8, 9, 6, 7, 10
+        );
+        Integer noRepetido = ejercicios.primerNoRepetido(list1);
+        System.out.println(noRepetido);
+
+        System.out.println("\n--- Ejercicio 3 ---");
+        List<String[]> entradas = Arrays.asList(
+            new String[]{"Ana", "80"},
+            new String[]{"Luis", "90"},
+            new String[]{"Carlos", "70"},
+            new String[]{"Ana", "85"},
+            new String[]{"Sofia", "95"},
+            new String[]{"Luis", "88"},
+            new String[]{"Pedro", "60"},
+            new String[]{"Maria", "75"}
+        );
+        ejercicios.rankingPuntajes(entradas);
+
+    }
+
+    
+
+    private static void runMaps(){
+        Maps maps = new Maps();
+        Map<String, Integer> hashMap = maps.construirHashMap();
+        System.err.println(hashMap);
+
+        Map<String, Integer> lMap = maps.construirLinkedHashMap();
+        System.err.println(lMap);
+
+        Map<String, Integer> tree = maps.construirLinkedHashMap();
+        System.err.println(tree);
+
+        Map<Person, Integer> treePMap = maps.construirTreeMapPersons();
+        System.err.println(treePMap);
+        maps.printFilter(treePMap);
+
+        System.out.println("\n");
+
+    }
+
+
 
     private static void runMaquina(){
         List<Maquina> maquinas = crearMaquinas();
@@ -59,8 +132,11 @@ public class App {
             System.out.println(maquina.getSubred() + " - " + maquina.getNombre());
         }
         System.out.println(maquinas0.size());
+
+        System.out.println("\n");
     }
 
+    
 
     static List<Maquina> crearMaquinas() {
 
@@ -116,7 +192,10 @@ public class App {
                 new Maquina("Nodo6", "169.238.150.174", Arrays.asList(6, 14, 3)),
                 new Maquina("DB13", "71.248.50.86", Arrays.asList(17, 11, 12)));
         return maquinas;
+
+        
     }
 
-}
+    
 
+}

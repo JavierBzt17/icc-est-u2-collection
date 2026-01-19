@@ -1,18 +1,20 @@
-## Getting Started
+# Práctica: Estructuras No Lineales - 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Autor
+- Nombre: Javier Barrezueta
+- Carrera/Curso: Estructura de datos
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
+##  Nombre de la práctica - Fecha
+- Práctica: Maps Ejercicios
+- Fecha: 2026-01-19
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Descripción
+En esta práctica se implementaron algoritmos de manipulación de datos utilizando la estructura Map (HashMap) en Java. Se desarrollaron soluciones eficientes para el conteo de frecuencias y la identificación de elementos únicos (primer no repetido). Además, se aplicó lógica de agrupación y filtrado para conservar valores máximos asociados a claves específicas (puntajes de jugadores y notas por carrera), finalizando con el ordenamiento de los resultados para la generación de reportes y rankings.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Evidencias
+### Captura 1
+Inserta aquí la captura del código o de la ejecución.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+![alt text](image-2.png)
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
